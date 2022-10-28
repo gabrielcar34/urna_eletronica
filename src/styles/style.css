@@ -1,0 +1,290 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bkg: #dbd5c9;
+}
+
+body {
+    height: 100vh;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+.urna {
+    margin: auto;
+    max-width: 800px; 
+    max-height: 400px;
+    width: 100%; 
+    height: 100%;
+    padding: 0px 35px;
+    position: relative;
+}
+
+.topo {
+    height: 10%;
+    background-color: var(--bkg);
+    transform: skew(120deg);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.279);
+    position: relative;
+    z-index: 1;
+    width: 90%;
+}
+
+
+.central {
+    transform: translate(-30px);
+    width: 90%;
+    height: 90%;
+    float: left;
+    background-color: var(--bkg);
+    display: flex;
+    /*background-image: linear-gradient(to right, #E8E8E8, #C1C1C1); */
+}
+
+.lateral {
+    width: 8%;
+    height: 90%;
+    position: absolute;
+    right: 10%;
+    background-color: var(--bkg);
+    border-left: 2px solid rgba(51, 51, 51, 0.093);
+}
+
+.lateral::after {
+    content: "";
+    position: relative;
+    bottom: 10%;
+    background-color: var(--bkg);
+    display: block;
+    height: 20%;
+}
+
+.corte {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    border-left: 60px solid transparent;
+    border-bottom: 50px solid rgba(0, 0, 0, 0.912);
+}
+
+.central {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.central > div {
+    width: var(--div-width);
+    height: 95%;
+}
+
+.screen {
+    
+    border: 1px solid  #333;
+    --div-width: 60%;
+    background-image: linear-gradient(to right, #E8E8E8, #C1C1C1);
+}
+
+.botoes {
+    --div-width: 40%;
+    margin-left: 20px;
+    border: 1px solid  #333;
+    padding: 10px;
+    background-color: #403A3A;
+}
+
+.botoes-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70%;
+}
+
+.botoes-1 > div {
+    color: #000;
+    padding: 5px 19px;
+    margin: 3px 5px;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 3px 3px 0px rgba(85, 85, 85, 0.755);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoes-2 {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botoes-2 > div {
+    cursor: pointer;
+    box-shadow: 3px 3px 0px rgba(85, 85, 85, 0.755);
+}
+
+.botao-normal {
+    padding: 5px;
+    background-color: #fff;
+}
+
+.botao-corrige {
+    background-color: #F09046;
+}
+
+.botao-confirmar {
+    padding: 10px;
+    background-color: #48C079;
+}
+
+.informacoes {
+    height: 80%;
+    display: flex;
+}
+
+
+.informacao-1 {
+    flex: 1;
+}
+
+.instrucoes {
+    border-top: 1px solid #000;
+    height: 20%;
+    visibility: hidden;
+}
+
+.titulo {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+
+.nome {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.numero-nao-encontrado h1 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.numeros {
+    display: flex;
+    margin-left: 10px;
+}
+
+.numeros > div {
+    border: 1px solid #000;
+}
+
+.numero-padding-normal {
+    padding: 20px 15px;
+}
+
+.numeros > .numero-padding {
+    padding: 10px 15px;
+}
+
+
+@keyframes alterarOpacidade {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+.numero-opacidade {
+   animation-duration: 0.8s;
+   animation-name: alterarOpacidade;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+
+.numero-encontrado {
+   display: none;
+}
+
+
+.numero-nao-encontrado {
+    display: none;
+}
+
+.numero-encontrado p {
+    margin: 10px;
+}
+
+
+.instrucoes > p {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.principal {
+   width: 80px;
+   display: none;
+}
+
+.principal > img {
+    width: 100%;
+}
+
+.principal-nome, .principal-sobrenome {
+    position: relative;
+    object-fit: cover;
+    bottom: 5px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.principal-sobrenome {
+    font-size: 10px;
+    padding: 5px;
+    
+}
+
+
+.secundario {
+    width: 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    bottom: 3px;
+}
+
+.informacao-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.secundario img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.visualizar {
+    display: block;
+    visibility: visible;
+}
+
+.oculto {
+    visibility: hidden;
+    display: none;
+}
+
+.desabilitado {
+    visibility: hidden;
+}

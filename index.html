@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="urna">
+        <div class="topo"></div>
+        <div class="central">
+            <div class="screen">
+                <div class="informacoes">
+                    <div class="informacao-1">
+                        <p class="titulo">SEU VOTO PARA</p>
+                        <p class="nome">VEREADOR</p>
+                        <div class="numeros"></div>
+                        <div class="numero-encontrado">
+                            <p class="encontrado-nome">Nome</p>
+                            <p class="encontrado-partido">Partido</p>
+                        </div>
+                        <div class="numero-nao-encontrado">
+                           <h1 class="numero-opacidade">VOTO NULO</h1>
+                        </div>
+                    </div>
+                    <div class="informacao-2">
+                        <div class="principal">
+                            <img src="src/images/84.jpg">
+                            <div class="principal-nome">Gabriel</div>
+                        </div>
+                        <div class="secundario">
+                            <img src="src/images/84.jpg">
+                            <div class="principal-sobrenome">Jose</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="instrucoes">
+                    <p>Aperte a tela: </p>
+                    <p>CONFIRMA para CONFIRMAR este voto</p>
+                    <p>CORRIGE para REINICIAR este voto</p>
+                </div>
+            </div>
+            <div class="botoes">
+                <div class="botoes-1">
+                    <div class="botao" botao-value="1">1</div>
+                    <div class="botao" botao-value="2">2</div>
+                    <div class="botao" botao-value="3">3</div>
+                    <div class="botao" botao-value="4">4</div>
+                    <div class="botao" botao-value="5">5</div>
+                    <div class="botao" botao-value="6">6</div>
+                    <div class="botao" botao-value="7">7</div>
+                    <div class="botao" botao-value="8">8</div>
+                    <div class="botao" botao-value="9">9</div>
+                    <div class="botao" botao-value="0">0</div>
+                </div>
+                <div class="botoes-2">
+                    <div class="botao-normal botao-branco">Branco</div>
+                    <div class="botao-normal botao-corrige">Corrige</div>
+                    <div class="botao-confirmar">Confirma</div>
+                </div>
+            </div>
+        </div>
+        <div class="lateral">
+            <div class="corte"></div>
+        </div>
+    </div>
+    <script src="./dist/script.js" type="module"></script>
+</body>
+</html>
